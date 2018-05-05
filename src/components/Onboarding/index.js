@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Header from '../../components/Layout/Header';
 import Question1 from './question1';
 import Question2 from './question2';
 import Question3 from './question3';
@@ -12,53 +13,46 @@ type Props = {
 };
 
 class Onboarding extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            answer1: 0,
-            answer2: 0,
-            answer3: 0,
-            answer4: 0,
-            answer5: 0,
-        }
-        this.onQuestionAnswer = (answer, part) => {
-            this.setState({
-                [part]: answer
-            })
-        }
-    }
-    componentWillReceiveProps(nextProps) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      answer1: 0,
+      answer2: 0,
+      answer3: 0,
+      answer4: 0,
+      answer5: 0,
+    };
+    this.onQuestionAnswer = (answer, part) => {
+      this.setState({
+        [part]: answer,
+      });
+    };
+  }
+  componentWillReceiveProps(nextProps) {
 
-    }
+  }
 
-    renderQuestion1 = () => {
-        return <Question1 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
-    }
-    renderQuestion2 = () => {
-        return <Question2 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
-    }
-    renderQuestion3 = () => {
-        return <Question3 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
-    }
-    renderQuestion4 = () => {
-        return <Question4 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
-    }
-    renderQuestion5 = () => {
-        return <Question5 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
-    }
+    renderQuestion1 = () => <Question1 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
+    renderQuestion2 = () => <Question2 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
+    renderQuestion3 = () => <Question3 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
+    renderQuestion4 = () => <Question4 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
+    renderQuestion5 = () => <Question5 history={this.props.history} onQuestionAnswer={this.onQuestionAnswer} />
 
     props: Props;
 
     render() {
-        return (
-            <Switch>
-                <Route path="/onboarding" exact component={this.renderQuestion1} />
-                <Route path="/onboarding/q2" component={this.renderQuestion2} />
-                <Route path="/onboarding/q3" component={this.renderQuestion3} />
-                <Route path="/onboarding/q4" component={this.renderQuestion4} />
-                <Route path="/onboarding/q5" component={this.renderQuestion5} />
-            </Switch>
-        );
+      return (
+        <div>
+          <Header label="Onboarding" />
+          <Switch>
+            <Route path="/onboarding" exact component={this.renderQuestion1} />
+            <Route path="/onboarding/q2" component={this.renderQuestion2} />
+            <Route path="/onboarding/q3" component={this.renderQuestion3} />
+            <Route path="/onboarding/q4" component={this.renderQuestion4} />
+            <Route path="/onboarding/q5" component={this.renderQuestion5} />
+          </Switch>
+        </div>
+      );
     }
 }
 
