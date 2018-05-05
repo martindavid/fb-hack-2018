@@ -25,31 +25,29 @@ const ContentDiv = styled.div`
 `;
 
 const YoungPeopleView = ({ history, location, match }: Props) => {
-  console.log('Test');
-
   let headerLabel;
-
-  if (location.pathname.includes('home')) {
+  if (location.pathname === '/home') {
     headerLabel = 'Home';
-  } else if (location.pathname.includes('course')) {
+  } else if (location.pathname === '/home/history') {
     headerLabel = 'Courses';
-  } else if (location.pathname.includes('progress')) {
+  } else if (location.pathname === '/home/progress') {
     headerLabel = 'Leaderboard';
-  } else if (location.pathname.includes('profile')) {
+  } else if (location.pathname === '/home/profile') {
     headerLabel = 'Profile';
   } else {
-    headerLabel = 'iFuture';
+    headerLabel = 'Cat O2 Saver';
   }
+  console.log(headerLabel);
 
   return (
-    <Box full texture={location.pathname === '/' && bg}>
+    <Box full texture={location.pathname === '/home' && bg}>
       <Header label={headerLabel} />
       <ContentDiv>
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/course-list" component={CourseList} />
-          <Route path="/progress" component={Leaderboard} />
-          <Route path="/profile" component={Profile} />
+          <Route path="/home" exact component={Home} />
+          <Route path="/home/history" component={CourseList} />
+          <Route path="/home/progress" component={Leaderboard} />
+          <Route path="/home/profile" component={Profile} />
         </Switch>
       </ContentDiv>
       <Box align="stretch" justify="end" flex="grow">

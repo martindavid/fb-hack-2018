@@ -27,6 +27,8 @@ const Card = styled(Box)`
 `;
 
 export default function () {
+  console.log('Loaded');
+
   return (
     <Box>
       <List pad="medium">

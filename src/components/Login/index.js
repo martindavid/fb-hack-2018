@@ -91,7 +91,7 @@ const validationSchema = Yup.object().shape({
 });
 
 const handleSubmit = (values, { props }) => {
-  props.history.push(routes.home);
+  props.history.push('/home');
 };
 
 export default compose(

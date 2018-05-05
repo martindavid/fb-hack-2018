@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Box from 'grommet/components/Box';
 import Heading from 'grommet/components/Heading';
+import PropTypes from 'prop-types';
 
 const StyledBox = styled(Box)`
   background-color: #d60b52;
@@ -20,5 +21,9 @@ const Header = ({ label }) => (
     </Heading>
   </StyledBox>
 );
+
+Header.propTypes = {
+  label: PropTypes.string.isRequired,
+};
 
 export default Header;

@@ -20,6 +20,7 @@ class Root extends Component {
     super(props);
   }
 
+
   state = {
     loading: false,
   };
@@ -35,11 +36,8 @@ class Root extends Component {
       <App centered={false}>
         <Alert key="alert" pathname={this.props.location.pathname} />
         <Switch key="content">
-          <Route path={routes.home} exact component={Home} />
           <Route path={routes.login} component={Login} />
           <Route path={routes.register} component={Register} />
-          <Route path={routes.onboarding} component={Question1} />
-          <Route path="/" />
         </Switch>
       </App>
     );
