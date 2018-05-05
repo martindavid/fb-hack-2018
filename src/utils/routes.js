@@ -3,4 +3,5 @@ export const routes = {
   register: '/register',
   getStarted: '/get-started',
   home: '/',
+  onboarding: '/onboarding',
 };
