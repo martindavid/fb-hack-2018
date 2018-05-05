@@ -14,6 +14,14 @@ import Kids5 from '../../assets/kid-5.png';
 import Kids6 from '../../assets/kid-6.png';
 import Kids7 from '../../assets/kid-7.png';
 
+import Person1 from '../../assets/profile_1.png';
+import Person2 from '../../assets/profile_2.png';
+import Person3 from '../../assets/profile_3.png';
+import Person4 from '../../assets/profile_4.png';
+import Person5 from '../../assets/profile_5.png';
+import Person6 from '../../assets/profile_6.png';
+import LeaderboardBar from '../../assets/leaderboard_bar.png';
+
 const Avatar = styled(Image)`
   width: 64px;
   height: 64px;
@@ -31,6 +39,9 @@ export default function () {
 
   return (
     <Box>
+      <Box margin={{horizontal: "none", vertical: "none", top: "small"}} align="center" justify="center">
+        <Image src={LeaderboardBar} />
+      </Box>
       <List pad="medium">
         <ListItem pad="medium" separator="none">
           <Card
@@ -39,8 +50,8 @@ export default function () {
             align="center"
             pad={{ between: 'medium', vertical: 'medium', horizontal: 'medium' }}
           >
-            <Avatar src={Kids1} />
-            <Label margin="none">John</Label>
+            <Avatar src={Person1} />
+            <Label margin="none">David</Label>
             <Box flex="grow" align="end">
               <Label margin="none">1,560</Label>
             </Box>
@@ -53,8 +64,8 @@ export default function () {
             align="center"
             pad={{ between: 'medium', vertical: 'medium', horizontal: 'medium' }}
           >
-            <Avatar src={Kids2} />
-            <Label margin="none">Jessica</Label>
+            <Avatar src={Person2} />
+            <Label margin="none">Martin</Label>
             <Box flex="grow" align="end">
               <Label margin="none">1,420</Label>
             </Box>
@@ -67,8 +78,8 @@ export default function () {
             align="center"
             pad={{ between: 'medium', vertical: 'medium', horizontal: 'medium' }}
           >
-            <Avatar src={Kids3} />
-            <Label margin="none">Stephen</Label>
+            <Avatar src={Person3} />
+            <Label margin="none">Gera</Label>
             <Box flex="grow" align="end">
               <Label margin="none">1,280</Label>
             </Box>
@@ -81,8 +92,8 @@ export default function () {
             align="center"
             pad={{ between: 'medium', vertical: 'medium', horizontal: 'medium' }}
           >
-            <Avatar src={Kids4} />
-            <Label margin="none">Yuna</Label>
+            <Avatar src={Person4} />
+            <Label margin="none">Evan</Label>
             <Box flex="grow" align="end">
               <Label margin="none">960</Label>
             </Box>
@@ -95,8 +106,8 @@ export default function () {
             align="center"
             pad={{ between: 'medium', vertical: 'medium', horizontal: 'medium' }}
           >
-            <Avatar src={Kids5} />
-            <Label margin="none">Michael</Label>
+            <Avatar src={Person5} />
+            <Label margin="none">Kenny</Label>
             <Box flex="grow" align="end">
               <Label margin="none">760</Label>
             </Box>
@@ -109,7 +120,7 @@ export default function () {
             align="center"
             pad={{ between: 'medium', vertical: 'medium', horizontal: 'medium' }}
           >
-            <Avatar src={Kids6} />
+            <Avatar src={Person6} />
             <Label margin="none">Tina</Label>
             <Box flex="grow" align="end">
               <Label margin="none">600</Label>

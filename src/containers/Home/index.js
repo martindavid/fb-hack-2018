@@ -31,7 +31,7 @@ const MainView = ({ history, location, match }: Props) => {
   if (location.pathname === '/home') {
     headerLabel = 'Home';
   } else if (location.pathname === '/home/history') {
-    headerLabel = 'Courses';
+    headerLabel = 'Dictionary';
   } else if (location.pathname === '/home/progress') {
     headerLabel = 'Leaderboard';
   } else if (location.pathname === '/home/profile') {
