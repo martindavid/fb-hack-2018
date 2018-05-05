@@ -13,7 +13,7 @@ import { routes } from '../../utils/routes';
 import { showAlert } from '../../actions/alert';
 import { storeAuthData } from '../../actions/auth';
 import logo from '../../assets/logo.png';
-import bg from '../../assets/home-page.gif';
+import bg from '../../assets/Logo_front.gif';
 
 type Props = {
   errors: Object,
@@ -61,9 +61,6 @@ class Login extends Component {
       } = this.props;
       return (
         <Box full justify="center" texture={bg} pad={{ vertical: 'medium', horizontal: 'medium', between: 'large' }}>
-          <Box align="center" justify="center">
-            <Image size="small" src={logo} />
-          </Box>
           <div id="fb-root" />
           <Form onSubmit={handleSubmit}>
             <FormFields>

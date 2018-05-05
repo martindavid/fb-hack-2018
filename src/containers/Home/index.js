@@ -9,12 +9,12 @@ import Header from '../../components/Layout/Header';
 import Home from './Home';
 import Leaderboard from '../../components/Leaderboard';
 import FooterMenu from '../../components/Layout/FooterMenu';
-import bg from '../../assets/home-page.gif';
+import bg from '../../assets/5cats_tree.gif';
 import altBg from '../../assets/bg.png';
 import Profile from '../../components/Profile';
 import SuggestionPage from '../Suggestions';
-import Dictionary from "../../components/Dictionary/index";
-import DetailDic from "../../components/Dictionary/detailDic";
+import Dictionary from '../../components/Dictionary/index';
+import DetailDic from '../../components/Dictionary/detailDic';
 
 type Props = {
   history: Object,
