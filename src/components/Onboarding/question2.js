@@ -16,10 +16,11 @@ class Question2 extends Component {
         super(props);
         this.state = {
             choice1: false,
-            choice2: false,
-            choice3: true,
+            choice2: true,
+            choice3: false,
             choice4: false,
-            choice5: false
+            choice5: false,
+            answer: 40
         };
         this.onChange1 = this.onChange1.bind(this);
         this.onChange2 = this.onChange2.bind(this);
@@ -32,9 +33,6 @@ class Question2 extends Component {
     }
 
     componentDidMount(){
-        console.log("test");
-
-        console.log(this.props.history);
     }
 
     onChange1(event){
@@ -45,6 +43,7 @@ class Question2 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: false,
+                answer: 20
             });
         }
 
@@ -59,6 +58,7 @@ class Question2 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: false,
+                answer: 40
             });
         }
     }
@@ -71,6 +71,7 @@ class Question2 extends Component {
                 choice3: true,
                 choice4: false,
                 choice5: false,
+                answer: 60
             });
         }
     }
@@ -83,6 +84,7 @@ class Question2 extends Component {
                 choice3: false,
                 choice4: true,
                 choice5: false,
+                answer: 80
             });
         }
     }
@@ -95,6 +97,7 @@ class Question2 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: true,
+                answer: 100
             });
         }
     }
@@ -135,7 +138,10 @@ class Question2 extends Component {
                                      onChange={this.onChange5} />
                     </FormField>
                     <br/>
-                    <Button label="Next" onClick={() => this.props.history.push('/onboarding/q3')} />
+                    <Button label="Next" onClick={() => {
+                        this.props.onQuestionAnswer(this.state.answer, 'answer2');
+                        this.props.history.push('/onboarding/q3');
+                    }} />
                 </Box>
             </Box>
         );

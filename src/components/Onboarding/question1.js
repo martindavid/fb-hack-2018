@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
 import Box from 'grommet/components/Box';
-import { connect } from 'react-redux';
 import FormField from 'grommet/components/FormField';
 import RadioButton from 'grommet/components/RadioButton';
 import Label from 'grommet/components/Label';
@@ -19,7 +18,8 @@ class Question1 extends Component {
             choice2: false,
             choice3: true,
             choice4: false,
-            choice5: false
+            choice5: false,
+            answer: 40
         };
         this.onChange1 = this.onChange1.bind(this);
         this.onChange2 = this.onChange2.bind(this);
@@ -31,7 +31,7 @@ class Question1 extends Component {
 
     }
     componentDidMount() {
-        console.log('test');
+
     }
 
     onChange1(event){
@@ -42,6 +42,7 @@ class Question1 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: false,
+                answer: 0
             });
         }
 
@@ -56,6 +57,7 @@ class Question1 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: false,
+                answer: 20
             });
         }
     }
@@ -68,6 +70,7 @@ class Question1 extends Component {
                 choice3: true,
                 choice4: false,
                 choice5: false,
+                answer: 40
             });
         }
     }
@@ -80,6 +83,7 @@ class Question1 extends Component {
                 choice3: false,
                 choice4: true,
                 choice5: false,
+                answer: 60
             });
         }
     }
@@ -92,6 +96,7 @@ class Question1 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: true,
+                answer: 100
             });
         }
     }
@@ -133,7 +138,7 @@ class Question1 extends Component {
                     </FormField>
                     <br/>
                     <Button label="Next" onClick={() => {
-                        this.props.onQuestionAnswer(20, 'answer1');
+                        this.props.onQuestionAnswer(this.state.answer, 'answer1');
                         this.props.history.push('/onboarding/q2');
                     }} />
                 </Box>
