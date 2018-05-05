@@ -6,7 +6,7 @@ import PageLoading from 'components/PageLoading';
 import Alert from 'components/Alert';
 import Login from 'components/Login';
 import Register from 'components/Register';
-import Home from 'containers/Home'
+import Home from 'containers/Home';
 import { routes } from '../../utils//routes';
 
 type Props = {
@@ -18,6 +18,7 @@ class Root extends Component {
   constructor(props) {
     super(props);
   }
+
 
   state = {
     loading: false,
@@ -34,9 +35,10 @@ class Root extends Component {
       <App centered={false}>
         <Alert key="alert" pathname={this.props.location.pathname} />
         <Switch key="content">
-          <Route path={routes.home} exact component={Home} />
           <Route path={routes.login} component={Login} />
           <Route path={routes.register} component={Register} />
+          <Route path="/home" component={Home} />
+          <Route path="/" />
         </Switch>
       </App>
     );

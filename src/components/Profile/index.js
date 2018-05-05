@@ -4,7 +4,14 @@ import Box from 'grommet/components/Box';
 import Button from 'grommet/components/Button';
 
 class Profile extends Component {
-  props: Props;
+  constructor() {
+    super();
+    this.logout = this.logout.bind(this);
+  }
+
+  logout() {
+    this.props.history.push('/login');
+  }
 
   render() {
     return (

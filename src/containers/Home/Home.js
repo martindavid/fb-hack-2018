@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import Box from 'grommet/components/Box';
+import Camera from '../../components/Camera';
 
 import TutorCard from '../../components/Dashboard/TutorCard';
 import CourseList from '../../components/Dashboard/CourseList';
@@ -18,9 +19,7 @@ class Home extends Component {
   render() {
     return (
       <Box pad={{ vertical: 'large', horizontal: 'large', between: 'large' }}>
-        <ActionChecklist />
-        <TutorCard history={this.props.history} />
-        <CourseList history={this.props.history} />
+        <Camera />
       </Box>
     );
   }
