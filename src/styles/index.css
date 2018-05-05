@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.course-card {
+  margin: 10px 15px 20px;
+  padding: 0;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.course-card .progress {
+  height: 90px;
+}
+
+.course-label {
+  text-align: left;
+  font-size: 10pt;
+  color: grey;
+}
+
+.grommetux-button--primary:not(.grommetux-button--focus) {
+  border-color: #d60b52;
+}
+
+.grommetux-button--primary {
+  background-color: #d60b52;
+}
+
+.grommetux-button {
+  border: 2px solid #d60b52;
+}
+
+.grommetux-button:not(.grommetux-button--disabled):not(.grommetux-button--plain):not(.grommetux-button--fill).grommetux-button--primary:hover,
+.grommetux-button:not(.grommetux-button--disabled):not(.grommetux-button--plain):not(.grommetux-button--fill):hover {
+  box-shadow: 0 0 0 2px #d60b52;
+}
+
+.grommetux-radio-button__input:checked + .grommetux-radio-button__control {
+  border-color: #d60b52;
+}
+
+.grommetux-radio-button__input:checked
+  + .grommetux-radio-button__control:after {
+  background-color: #d60b52;
+}
+
+.grommetux-background-color-index--dark
+  .grommetux-background-color-index--light
+  .grommetux-radio-button:hover:not(.grommetux-radio-button--disabled)
+  .grommetux-radio-button__control,
+.grommetux-background-color-index--light
+  .grommetux-radio-button:hover:not(.grommetux-radio-button--disabled)
+  .grommetux-radio-button__control,
+.grommetux-radio-button:hover:not(.grommetux-radio-button--disabled)
+  .grommetux-radio-button__input:checked
+  + .grommetux-radio-button__control {
+  border-color: #d60b52;
+}
+
+.grommetux-radio-button__control {
+  border: 2px solid #d60b52;
+}
+
+.grommetux-check-box__control {
+  border: 2px solid #d60b52;
+}
+
+.grommetux-background-color-index--dark
+  .grommetux-background-color-index--light
+  .grommetux-check-box:hover:not(.grommetux-check-box--disabled)
+  .grommetux-check-box__control,
+.grommetux-background-color-index--light
+  .grommetux-check-box:hover:not(.grommetux-check-box--disabled)
+  .grommetux-check-box__control,
+.grommetux-check-box:hover:not(.grommetux-check-box--disabled)
+  .grommetux-check-box__input:checked
+  + .grommetux-check-box__control {
+  border-color: #d60b52;
+}
+
+.grommetux-check-box__control-check {
+  stroke: #d60b52;
+}
+
+.grommetux-check-box__input:checked + .grommetux-check-box__control {
+  border-color: #d60b52;
+}
