@@ -10,7 +10,8 @@ import Home from 'containers/Home';
 import Onboarding from 'components/Onboarding';
 import Dictionary from 'components/Dictionary';
 import { routes } from '../../utils/routes';
-import SuggestionPage from '../Suggestions';
+import { connect } from 'react-redux';
+
 
 type Props = {
   history: Object,
@@ -20,20 +21,17 @@ type Props = {
 class Root extends Component {
   constructor(props) {
     super(props);
+    const { auth } = props;
+
+    if (!auth) {
+      props.history.push('/login');
+    }
   }
-
-
-  state = {
-    loading: false,
-  };
 
   props: Props;
 
-  render() {
-    if (this.state.loading) {
-      return <PageLoading />;
-    }
 
+  render() {
     return (
       <App centered={false}>
         <Alert key="alert" pathname={this.props.location.pathname} />
@@ -49,4 +47,8 @@ class Root extends Component {
   }
 }
 
-export default withRouter(Root);
+const mapStateToProps = state => ({
+  auth: state.auth.auth,
+});
+
+export default withRouter(connect(mapStateToProps)(Root));
