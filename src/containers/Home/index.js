@@ -15,6 +15,7 @@ import Profile from '../../components/Profile';
 import SuggestionPage from '../Suggestions';
 import Dictionary from '../../components/Dictionary/index';
 import DetailDic from '../../components/Dictionary/detailDic';
+import ClassifierResult from './ClassifierResult';
 
 type Props = {
   history: Object,
@@ -32,7 +33,7 @@ const MainView = ({ history, location, match }: Props) => {
   if (location.pathname === '/home') {
     headerLabel = 'Home';
   } else if (location.pathname === '/home/history') {
-    headerLabel = 'Dictionary';
+    headerLabel = 'Achievement';
   } else if (location.pathname === '/home/progress') {
     headerLabel = 'Leaderboard';
   } else if (location.pathname === '/home/profile') {
@@ -50,6 +51,7 @@ const MainView = ({ history, location, match }: Props) => {
         <Switch>
           <Route path="/home" exact component={Home} />
           <Route path="/home/suggestion" component={SuggestionPage} />
+          <Route path="/home/result" component={ClassifierResult} />
           <Route path="/home/history" component={Dictionary} />
           <Route path="/home/historyDetail" component={DetailDic} />
           <Route path="/home/progress" component={Leaderboard} />

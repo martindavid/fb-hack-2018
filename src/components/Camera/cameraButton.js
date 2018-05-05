@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 const CameraButtonDiv = styled.div`
   text-align: center !important;
+  position: fixed;
+  bottom: 70px;
 
   input {
     display: none;
@@ -14,6 +16,7 @@ const Button = styled.button`
     width: 100px;
     height: 60px !important;
     border: none;
+    background-color: #d60b52 !important;
 `;
 
 class CameraButton extends React.Component {

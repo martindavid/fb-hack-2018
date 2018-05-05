@@ -12,6 +12,7 @@ class SuggestionPage extends React.Component {
 
   render() {
     const { data } = this.props;
+
     if (!data) {
       return <AlterSpinner />;
     }
@@ -31,52 +32,81 @@ class SuggestionPage extends React.Component {
         </div>
         <div className="row m-3">
           <div className="col text-center">
-            This is what you can do to make a better impact
+            <strong>This is what you can do to make a better impact</strong>
           </div>
         </div>
-        <div className="row">
-          <div className="col-sm-12">
-            <CourseCard
-              value={40}
-              courseName="How to make a craft from this"
-              backgroundColor="#00BCD4"
-              isTaken
-            />
-          </div>
-        </div>
-        <br />
-        <div className="row">
-          <div className="col">
-            <CourseCard
-              value={90}
-              courseName="Buy this reusable coffee cup"
-              backgroundColor="#E6EE9C"
-              isTaken
-            />
-          </div>
-        </div>
-        <br />
-        <div className="row">
-          <div className="col-sm-12">
-            <CourseCard
-              value={40}
-              courseName="How to make a craft from this"
-              backgroundColor="#00BCD4"
-              isTaken
-            />
-          </div>
-        </div>
-        <br />
-        <div className="row">
-          <div className="col-sm-12">
-            <CourseCard
-              value={40}
-              courseName="How to make a craft from this"
-              backgroundColor="#00BCD4"
-              isTaken
-            />
-          </div>
-        </div>
+        {
+          data.data.Suggestions.Refuse &&
+          [
+            <div className="row" key={0}>
+              <div className="col-sm-12">
+                <CourseCard
+                  imgSrc={data.data.Suggestions.Refuse.image}
+                  type="Refuse"
+                  courseName="What alternative to replace this product?"
+                  backgroundColor="#D4838F"
+                  isPaid={data.data.Suggestions.Refuse.price !== 'Free'}
+                  cats={data.data.Suggestions.Refuse.cats}
+                />
+              </div>
+            </div>,
+            <br key={1} />,
+          ]
+        }
+        {
+          data.data.Suggestions.Reduce &&
+          [
+            <div className="row" key={0}>
+              <div className="col-sm-12">
+                <CourseCard
+                  imgSrc={data.data.Suggestions.Reduce.image}
+                  type="Reduce"
+                  courseName="How can you reduce the usage of this product?"
+                  backgroundColor="#D6CEAA"
+                  price={data.data.Suggestions.Reduce.price !== 'Free'}
+                  cats={data.data.Suggestions.Reduce.cats}
+                />
+              </div>
+            </div>,
+            <br key={1} />,
+          ]
+        }
+        {
+          (data.data.Suggestions.Repurpose && data.data.Suggestions.Repurpose['option 1']) &&
+          [
+            <div className="row" key={0}>
+              <div className="col-sm-12">
+                <CourseCard
+                  imgSrc={data.data.Suggestions.Repurpose['option 1'].image}
+                  type="Repurpose"
+                  courseName="How can you make this product into something?"
+                  backgroundColor="#B5B479"
+                  price={data.data.Suggestions.Repurpose['option 1'].price !== 'Free'}
+                  cats={data.data.Suggestions.Repurpose['option 1'].cats}
+                />
+              </div>
+            </div>,
+            <br key={1} />,
+          ]
+        }
+        {
+          data.data.Suggestions.Recycle &&
+          [
+            <div className="row" key={0}>
+              <div className="col-sm-12">
+                <CourseCard
+                  imgSrc={data.data.Suggestions.Recycle.image}
+                  type="Recycle"
+                  courseName="How can you recyle this product?"
+                  backgroundColor="#79A687"
+                  price={data.data.Suggestions.Recycle.price !== 'Free'}
+                  cats={data.data.Suggestions.Recycle.cats}
+                />
+              </div>
+            </div>,
+            <br key={1} />,
+          ]
+        }
       </div>
     );
   }
