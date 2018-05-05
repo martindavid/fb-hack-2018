@@ -11,6 +11,7 @@ import CourseList from './CourseList';
 import Leaderboard from '../../components/Leaderboard';
 import FooterMenu from '../../components/Layout/FooterMenu';
 import bg from '../../assets/home-page.gif';
+import altBg from '../../assets/bg.png';
 import Profile from '../../components/Profile';
 import SuggestionPage from '../Suggestions';
 
@@ -30,7 +31,7 @@ const MainView = ({ history, location, match }: Props) => {
   if (location.pathname === '/home') {
     headerLabel = 'Home';
   } else if (location.pathname === '/home/history') {
-    headerLabel = 'Courses';
+    headerLabel = 'History';
   } else if (location.pathname === '/home/progress') {
     headerLabel = 'Leaderboard';
   } else if (location.pathname === '/home/profile') {
@@ -38,10 +39,11 @@ const MainView = ({ history, location, match }: Props) => {
   } else {
     headerLabel = 'Cat O2 Saver';
   }
-  console.log(headerLabel);
+
 
   return (
-    <Box full texture={location.pathname === '/home' && bg}>
+
+    <Box full texture={location.pathname === '/home' && bg} colorIndex="light-2">
       <Header label={headerLabel} />
       <ContentDiv>
         <Switch>

@@ -43,7 +43,7 @@ const CourseCard = ({
         </button>
       )}
     </div>
-    <span className="course-label">Course</span>
+    <span className="course-label">Repurpose</span>
     <h4>{courseName}</h4>
   </div>
 );
