@@ -7,12 +7,13 @@ import Box from 'grommet/components/Box';
 
 import Header from '../../components/Layout/Header';
 import Home from './Home';
-import CourseList from './CourseList';
 import Leaderboard from '../../components/Leaderboard';
 import FooterMenu from '../../components/Layout/FooterMenu';
 import bg from '../../assets/home-page.gif';
 import Profile from '../../components/Profile';
 import SuggestionPage from '../Suggestions';
+import Dictionary from "../../components/Dictionary/index";
+import DetailDic from "../../components/Dictionary/detailDic";
 
 type Props = {
   history: Object,
@@ -47,7 +48,8 @@ const MainView = ({ history, location, match }: Props) => {
         <Switch>
           <Route path="/home" exact component={Home} />
           <Route path="/home/suggestion" component={SuggestionPage} />
-          <Route path="/home/history" component={CourseList} />
+          <Route path="/home/history" component={Dictionary} />
+          <Route path="/home/historyDetail" component={DetailDic} />
           <Route path="/home/progress" component={Leaderboard} />
           <Route path="/home/profile" component={Profile} />
         </Switch>

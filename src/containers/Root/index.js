@@ -8,6 +8,7 @@ import Login from 'components/Login';
 import Register from 'components/Register';
 import Home from 'containers/Home';
 import Onboarding from 'components/Onboarding';
+import Dictionary from 'components/Dictionary';
 import { routes } from '../../utils/routes';
 import SuggestionPage from '../Suggestions';
 
