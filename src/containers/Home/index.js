@@ -10,6 +10,7 @@ import Home from './Home';
 import Leaderboard from '../../components/Leaderboard';
 import FooterMenu from '../../components/Layout/FooterMenu';
 import bg from '../../assets/home-page.gif';
+import altBg from '../../assets/bg.png';
 import Profile from '../../components/Profile';
 import SuggestionPage from '../Suggestions';
 import Dictionary from "../../components/Dictionary/index";
@@ -39,10 +40,11 @@ const MainView = ({ history, location, match }: Props) => {
   } else {
     headerLabel = 'Cat O2 Saver';
   }
-  console.log(headerLabel);
+
 
   return (
-    <Box full texture={location.pathname === '/home' && bg}>
+
+    <Box full texture={location.pathname === '/home' && bg} colorIndex="light-2">
       <Header label={headerLabel} />
       <ContentDiv>
         <Switch>

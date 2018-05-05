@@ -2,10 +2,8 @@ import React from 'react';
 import Spinner from 'components/Spinner';
 import styled from 'styled-components';
 import CameraButton from './cameraButton';
-
-const StyledSpinner = styled(Spinner)`
-  
-`;
+import { connect } from 'react-redux';
+import { uploadImageSuccess } from 'actions/home';
 
 class Camera extends React.Component {
   constructor() {
@@ -23,6 +21,7 @@ class Camera extends React.Component {
 
     reader.onloadend = () => {
       setTimeout(() => {
+        this.props.uploadImageSuccess(reader.result);
         this.setState({
           imageSrc: reader.result,
           isLoading: false,
@@ -44,7 +43,7 @@ class Camera extends React.Component {
           onChange={e => this.captureImage(e)}
         />
         <div>
-          { isLoading && <StyledSpinner style={{ position: 'fixed', left: '45%', marginTop: '20%' }} /> }
+          { isLoading && <Spinner style={{ position: 'fixed', left: '45%', marginTop: '20%' }} /> }
           { imageSrc && <img src={this.state.imageSrc} alt="Camera" />}
         </div>
       </div>
@@ -52,4 +51,12 @@ class Camera extends React.Component {
   }
 }
 
-export default Camera;
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = dispatch => ({
+  uploadImageSuccess: image => dispatch(uploadImageSuccess(image)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Camera);
