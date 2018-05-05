@@ -17,11 +17,12 @@ class Question3 extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            choice1: false,
+            choice1: true,
             choice2: false,
-            choice3: true,
+            choice3: false,
             choice4: false,
-            choice5: false
+            choice5: false,
+            answer: 20
         };
         this.onChange1 = this.onChange1.bind(this);
         this.onChange2 = this.onChange2.bind(this);
@@ -41,6 +42,7 @@ class Question3 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: false,
+                answer: 20
             });
         }
 
@@ -55,6 +57,7 @@ class Question3 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: false,
+                answer: 40
             });
         }
     }
@@ -67,6 +70,7 @@ class Question3 extends Component {
                 choice3: true,
                 choice4: false,
                 choice5: false,
+                answer: 60
             });
         }
     }
@@ -79,6 +83,7 @@ class Question3 extends Component {
                 choice3: false,
                 choice4: true,
                 choice5: false,
+                answer: 80
             });
         }
     }
@@ -91,6 +96,7 @@ class Question3 extends Component {
                 choice3: false,
                 choice4: false,
                 choice5: true,
+                answer: 100
             });
         }
     }
@@ -131,7 +137,10 @@ class Question3 extends Component {
                                      onChange={this.onChange5} />
                     </FormField>
                     <br/>
-                    <Button label="Next" onClick={() => this.props.history.push('/Onboarding/q4')} />
+                    <Button label="Next" onClick={() => {
+                        this.props.onQuestionAnswer(this.state.answer, 'answer3');
+                        this.props.history.push('/Onboarding/q4');
+                    }} />
                 </Box>
             </Box>
         );
