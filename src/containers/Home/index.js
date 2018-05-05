@@ -10,8 +10,9 @@ import Home from './Home';
 import CourseList from './CourseList';
 import Leaderboard from '../../components/Leaderboard';
 import FooterMenu from '../../components/Layout/FooterMenu';
-import bg from '../../assets/bg.png';
+import bg from '../../assets/home-page.gif';
 import Profile from '../../components/Profile';
+import SuggestionPage from '../Suggestions';
 
 type Props = {
   history: Object,
@@ -24,7 +25,7 @@ const ContentDiv = styled.div`
   margin-top: 65px;
 `;
 
-const YoungPeopleView = ({ history, location, match }: Props) => {
+const MainView = ({ history, location, match }: Props) => {
   let headerLabel;
   if (location.pathname === '/home') {
     headerLabel = 'Home';
@@ -45,6 +46,7 @@ const YoungPeopleView = ({ history, location, match }: Props) => {
       <ContentDiv>
         <Switch>
           <Route path="/home" exact component={Home} />
+          <Route path="/home/suggestion" component={SuggestionPage} />
           <Route path="/home/history" component={CourseList} />
           <Route path="/home/progress" component={Leaderboard} />
           <Route path="/home/profile" component={Profile} />
@@ -57,4 +59,4 @@ const YoungPeopleView = ({ history, location, match }: Props) => {
   );
 };
 
-export default YoungPeopleView;
+export default MainView;
