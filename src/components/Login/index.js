@@ -62,7 +62,7 @@ class Login extends Component {
       return (
         <Box full justify="center" texture={bg} pad={{ vertical: 'medium', horizontal: 'medium', between: 'large' }}>
           <div id="fb-root" />
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} style={{ marginTop: '320px' }}>
             <FormFields>
               <FormField label="Email" error={touched.email && errors.email && errors.email}>
                 <Field name="email" type="email" />

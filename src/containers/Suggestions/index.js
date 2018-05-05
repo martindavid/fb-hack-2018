@@ -1,17 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import AlterSpinner from 'components/Spinner/alterSpinner';
+import { cleanUpSuggestionData } from 'actions/data';
 import CourseCard from '../../components/Dashboard/CourseCard';
 
 
 class SuggestionPage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: null,
-    };
+  componentWillUnmount() {
+    this.props.cleanUpSuggestionData();
   }
 
   render() {
+    const { data } = this.props;
+    if (!data) {
+      return <AlterSpinner />;
+    }
+
     return (
       <div className="container" style={{ marginTop: '15px' }}>
         <div className="row">
@@ -19,15 +23,15 @@ class SuggestionPage extends React.Component {
             <img src={this.props.captureImage} alt="Camera" />
           </div>
           <div className="col">
-              Plastic cup<br />
-              Brand: Unknown<br />
-              CO2: 1.6kg/kg<br />
-              Ecofriendly level: low
+            {data.product}<br />
+              CO2: {data.data['CO2 produced']}<br />
+              Ecofriendly level: {data.data['Eco-friendly level']}<br />
+              Take {data.data.Landfill} to decompose.
           </div>
         </div>
         <div className="row m-3">
           <div className="col text-center">
-            Your suggestion
+            This is what you can do to make a better impact
           </div>
         </div>
         <div className="row">
@@ -80,9 +84,15 @@ class SuggestionPage extends React.Component {
 
 const mapStateToProps = (state) => {
   const { captureImage } = state.home;
+  const { data } = state.data;
   return {
     captureImage,
+    data,
   };
 };
 
-export default connect(mapStateToProps)(SuggestionPage);
+const mapDispatchToProps = dispatch => ({
+  cleanUpSuggestionData: () => dispatch(cleanUpSuggestionData()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SuggestionPage);

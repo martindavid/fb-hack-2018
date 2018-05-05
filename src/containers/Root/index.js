@@ -19,17 +19,7 @@ type Props = {
 };
 
 class Root extends Component {
-  constructor(props) {
-    super(props);
-    const { auth } = props;
-
-    if (!auth) {
-      props.history.push('/login');
-    }
-  }
-
   props: Props;
-
 
   render() {
     return (

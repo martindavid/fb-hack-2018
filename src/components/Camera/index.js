@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import CameraButton from './cameraButton';
 import { connect } from 'react-redux';
 import { uploadImageSuccess } from 'actions/home';
+import { fetchImageInformation } from 'actions/data';
 
 class Camera extends React.Component {
   constructor() {
@@ -22,6 +23,7 @@ class Camera extends React.Component {
     reader.onloadend = () => {
       setTimeout(() => {
         this.props.uploadImageSuccess(reader.result);
+        this.props.fetchImageInformation(file);
         this.setState({
           imageSrc: reader.result,
           isLoading: false,
@@ -51,12 +53,9 @@ class Camera extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-
-});
-
 const mapDispatchToProps = dispatch => ({
   uploadImageSuccess: image => dispatch(uploadImageSuccess(image)),
+  fetchImageInformation: image => dispatch(fetchImageInformation(image)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Camera);
+export default connect(null, mapDispatchToProps)(Camera);

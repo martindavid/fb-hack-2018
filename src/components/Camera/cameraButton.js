@@ -27,8 +27,7 @@ class CameraButton extends React.Component {
         <input
           ref={node => this.cameraDom = node}
           type="file"
-          accept="image/*"
-          capture="camera"
+          accept="image/png, image/jpeg;capture=camera"
           onChange={e => onChange(e.target.files[0])}
         />
       </CameraButtonDiv>
