@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Box from 'grommet/components/Box';
 
+import RefuseSuggestion from 'containers/SuggestionContents/Refuse';
 import Header from '../../components/Layout/Header';
 import Home from './Home';
 import Leaderboard from '../../components/Leaderboard';
@@ -16,6 +17,7 @@ import SuggestionPage from '../Suggestions';
 import Dictionary from '../../components/Dictionary/index';
 import DetailDic from '../../components/Dictionary/detailDic';
 import ClassifierResult from './ClassifierResult';
+import SuccessAction from '../SuggestionContents/SuccessAction';
 
 type Props = {
   history: Object,
@@ -56,6 +58,8 @@ const MainView = ({ history, location, match }: Props) => {
           <Route path="/home/historyDetail" component={DetailDic} />
           <Route path="/home/progress" component={Leaderboard} />
           <Route path="/home/profile" component={Profile} />
+          <Route path="/home/reuse" component={RefuseSuggestion} />
+          <Route path="/home/success" component={SuccessAction} />
         </Switch>
       </ContentDiv>
       <Box align="stretch" justify="end" flex="grow">

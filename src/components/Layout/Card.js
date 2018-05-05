@@ -9,8 +9,8 @@ const StyledBox = styled.div`
   background-color: white;
 `;
 
-const CustomCard = ({ children, className }) => (
-  <StyledBox className={className}>{children}</StyledBox>
+const CustomCard = ({ children, className, style }) => (
+  <StyledBox style={style} className={className}>{children}</StyledBox>
 );
 
 export default CustomCard;

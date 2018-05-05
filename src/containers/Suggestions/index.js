@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 import AlterSpinner from 'components/Spinner/alterSpinner';
 import { cleanUpSuggestionData } from 'actions/data';
 import CourseCard from '../../components/Dashboard/CourseCard';
+import { Link } from 'react-router-dom';
 
 
 class SuggestionPage extends React.Component {
-  componentWillUnmount() {
-    this.props.cleanUpSuggestionData();
-  }
+  componentWillMount() {}
+  // componentWillUnmount() {
+  //   this.props.cleanUpSuggestionData();
+  // }
 
   render() {
     const { data } = this.props;
@@ -37,8 +39,8 @@ class SuggestionPage extends React.Component {
         </div>
         {
           data.data.Suggestions.Refuse &&
-          [
-            <div className="row" key={0}>
+          <Link to="/home/reuse">
+            <div className="row">
               <div className="col-sm-12">
                 <CourseCard
                   imgSrc={data.data.Suggestions.Refuse.image}
@@ -49,13 +51,14 @@ class SuggestionPage extends React.Component {
                   cats={data.data.Suggestions.Refuse.cats}
                 />
               </div>
-            </div>,
-            <br key={1} />,
-          ]
+            </div>
+            <br />
+          </Link>
+
         }
         {
           data.data.Suggestions.Reduce &&
-          [
+          <Link to="/home/reuse">
             <div className="row" key={0}>
               <div className="col-sm-12">
                 <CourseCard
@@ -67,13 +70,13 @@ class SuggestionPage extends React.Component {
                   cats={data.data.Suggestions.Reduce.cats}
                 />
               </div>
-            </div>,
-            <br key={1} />,
-          ]
+            </div>
+            <br key={1} />
+          </Link>
         }
         {
           (data.data.Suggestions.Repurpose && data.data.Suggestions.Repurpose['option 1']) &&
-          [
+          <Link to="/home/reuse">
             <div className="row" key={0}>
               <div className="col-sm-12">
                 <CourseCard
@@ -85,13 +88,13 @@ class SuggestionPage extends React.Component {
                   cats={data.data.Suggestions.Repurpose['option 1'].cats}
                 />
               </div>
-            </div>,
-            <br key={1} />,
-          ]
+            </div>
+            <br key={1} />
+          </Link>
         }
         {
           data.data.Suggestions.Recycle &&
-          [
+          <Link to="/home/reuse">
             <div className="row" key={0}>
               <div className="col-sm-12">
                 <CourseCard
@@ -103,9 +106,9 @@ class SuggestionPage extends React.Component {
                   cats={data.data.Suggestions.Recycle.cats}
                 />
               </div>
-            </div>,
-            <br key={1} />,
-          ]
+            </div>
+            <br key={1} />
+          </Link>
         }
       </div>
     );
