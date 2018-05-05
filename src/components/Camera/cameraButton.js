@@ -17,12 +17,6 @@ const Button = styled.button`
 `;
 
 class CameraButton extends React.Component {
-  constructor() {
-    super();
-    this.cameraDom = null;
-  }
-
-
   render() {
     const { onChange } = this.props;
 
