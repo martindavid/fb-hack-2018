@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import Box from 'grommet/components/Box';
 import Label from 'grommet/components/Label';
+import Button from 'grommet/components/Button';
 
 type Props = {
     history: Object,
@@ -18,7 +19,6 @@ class ConsumptionResult extends Component {
     }
 
     props: Props;
-
 
 
     render() {
@@ -41,6 +41,10 @@ class ConsumptionResult extends Component {
                     <Label align="center">
                         Your personal Earth Overshoot Day is: {day}/{month}/{year}
                     </Label>
+                    <br/>
+                    <Button label="Start Your Journey" onClick={() => {
+                        this.props.history.push('/home');
+                    }} />
                 </Box>
             </Box>
         );

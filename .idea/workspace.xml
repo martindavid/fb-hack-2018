@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f71cca91-9a47-48b9-9982-3a3fe4c36fde" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/leaderboard_bar.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/profile_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/profile_2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/profile_3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/profile_4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/profile_5.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/assets/profile_6.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/Leaderboard/index.js" afterPath="$PROJECT_DIR$/src/components/Leaderboard/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Home/index.js" afterPath="$PROJECT_DIR$/src/containers/Home/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/Onboarding/consumptionResult.js" afterPath="$PROJECT_DIR$/src/components/Onboarding/consumptionResult.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,13 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Leaderboard/index.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Onboarding/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="116" column="15" lean-forward="true" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="consumptionResult.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Onboarding/consumptionResult.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
-                <element signature="e#9#35#0" expanded="true" />
+                <element signature="e#9#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,7 +83,6 @@
         <option value="$PROJECT_DIR$/src/components/Onboarding/question4.js" />
         <option value="$PROJECT_DIR$/src/components/Onboarding/question5.js" />
         <option value="$PROJECT_DIR$/src/components/Onboarding/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Onboarding/consumptionResult.js" />
         <option value="$PROJECT_DIR$/src/containers/Root/index.js" />
         <option value="$PROJECT_DIR$/src/utils/routes.js" />
         <option value="$PROJECT_DIR$/src/components/Dictionary/detail.js" />
@@ -89,6 +90,7 @@
         <option value="$PROJECT_DIR$/src/components/Dictionary/detailDic.js" />
         <option value="$PROJECT_DIR$/src/containers/Home/index.js" />
         <option value="$PROJECT_DIR$/src/components/Leaderboard/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Onboarding/consumptionResult.js" />
       </list>
     </option>
   </component>
@@ -221,12 +223,6 @@
               <item name="fb-hack-2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="fb-hack-2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fb-hack-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fb-hack-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -234,21 +230,7 @@
               <item name="fb-hack-2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Dictionary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fb-hack-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fb-hack-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Leaderboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fb-hack-2018" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fb-hack-2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
+              <item name="Onboarding" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -319,12 +301,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525497068245</updated>
-      <workItem from="1525497070502" duration="27091000" />
+      <workItem from="1525497070502" duration="27781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27091000" />
+    <option name="totallyTimeSpent" value="27781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="49" width="1440" height="878" extended-state="0" />
@@ -499,24 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/question5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="134" column="49" lean-forward="true" selection-start-line="134" selection-start-column="49" selection-end-line="134" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/question1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="e#9#50#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Onboarding/question2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-449">
@@ -585,16 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/consumptionResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="e#9#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -640,7 +594,7 @@
         <state relative-caret-position="159">
           <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="22" selection-end-column="3" />
           <folding>
-            <element signature="e#9#50#0" expanded="true" />
+            <element signature="e#9#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -650,16 +604,8 @@
         <state relative-caret-position="486">
           <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
           <folding>
-            <element signature="e#9#50#0" expanded="true" />
+            <element signature="e#9#50#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +614,7 @@
         <state relative-caret-position="612">
           <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding>
-            <element signature="e#9#50#0" expanded="true" />
+            <element signature="e#9#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -678,7 +624,7 @@
         <state relative-caret-position="180">
           <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding>
-            <element signature="e#9#50#0" expanded="true" />
+            <element signature="e#9#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -696,17 +642,49 @@
         <state relative-caret-position="363">
           <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
           <folding>
-            <element signature="e#10#36#0" expanded="true" />
+            <element signature="e#10#36#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/question1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="142" column="25" lean-forward="true" selection-start-line="138" selection-start-column="20" selection-end-line="142" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/question5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Leaderboard/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="116" column="15" lean-forward="true" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
+        <state relative-caret-position="342">
+          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Onboarding/consumptionResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <element signature="e#9#35#0" expanded="true" />
+            <element signature="e#9#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
