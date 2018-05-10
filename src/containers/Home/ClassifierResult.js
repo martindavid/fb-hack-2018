@@ -19,7 +19,7 @@ class ClassifierResult extends React.Component {
   componentWillMount() {}
 
   render() {
-    const { captureImage, data } = this.props;
+    const { captureImage, data, history } = this.props;
 
     if (!data) {
       return <AlterSpinner />;
@@ -51,9 +51,11 @@ class ClassifierResult extends React.Component {
           <p>
             <ResultText>
               {
-                data.isEcoFriendly === 1 ?
+                data.data['CO2 produced'] === 'Unknown' ?
+                "Item can't be classified" :
+                (data.isEcoFriendly === 1 ?
                 'Eco-friendly Item' :
-                'CO2 Footprint Detected!!'
+                'CO2 Footprint Detected!!')
               }
             </ResultText>
           </p>
@@ -63,7 +65,11 @@ class ClassifierResult extends React.Component {
           <div className="col-sm-12 text-center">
             <button
               onClick={() => {
-              this.props.history.push('/home/suggestion');
+                if (data.data['CO2 produced'] === 'Unknown') {
+                  history.push('/home');
+                } else {
+                  history.push('/home/suggestion');
+                }
             }}
               className="btn btn-primary"
             >Ok
