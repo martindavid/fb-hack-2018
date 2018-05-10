@@ -6,12 +6,6 @@ import Image from 'grommet/components/Image';
 import Label from 'grommet/components/Label';
 import List from 'grommet/components/List';
 import ListItem from 'grommet/components/ListItem';
-import Kids1 from '../../assets/kid-1.png';
-import Kids2 from '../../assets/kid-2.png';
-import Kids3 from '../../assets/kid-3.png';
-import Kids4 from '../../assets/kid-4.png';
-import Kids5 from '../../assets/kid-5.png';
-import Kids6 from '../../assets/kid-6.png';
 import Kids7 from '../../assets/kid-7.png';
 
 import Person1 from '../../assets/profile_1.png';
@@ -39,7 +33,7 @@ export default function () {
 
   return (
     <Box>
-      <Box margin={{horizontal: "none", vertical: "none", top: "small"}} align="center" justify="center">
+      <Box margin={{ horizontal: 'none', vertical: 'none', top: 'small' }} align="center" justify="center">
         <Image src={LeaderboardBar} />
       </Box>
       <List pad="medium">

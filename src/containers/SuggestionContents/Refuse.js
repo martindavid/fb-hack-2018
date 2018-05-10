@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 
 class RefuseSuggestion extends React.Component {
+  componentWillMount() {}
+
   render() {
     const { data } = this.props;
     console.log(data);
@@ -20,7 +22,7 @@ class RefuseSuggestion extends React.Component {
           <img
             style={{ width: '100%', height: '100%' }}
             src={data.data.Suggestions.Recycle.image}
-            alt="Main Picture"
+            alt="Recycle"
           />
         </div>
         <div className="col-sm-12">

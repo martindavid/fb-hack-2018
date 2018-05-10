@@ -5,11 +5,14 @@ import { cleanUpSuggestionData } from 'actions/data';
 import styled from 'styled-components';
 import LeftParantheses from 'assets/left_parenthesis.png';
 import RightParantheses from 'assets/right_parenthesis.png';
-import { Link } from 'react-router-dom';
 
 const ResultText = styled.span`
-    font-size: 18pt;
-    color: #d60b52;
+  font-size: 18pt;
+  color: #d60b52;
+`;
+
+const ImageResult = styled.img`
+  transform: scale(0.8);
 `;
 
 class ClassifierResult extends React.Component {
@@ -27,11 +30,11 @@ class ClassifierResult extends React.Component {
       <div className="row text-center" style={{ marginTop: '100px' }}>
         <div className="col-sm-12">
           <img src={LeftParantheses} alt="Left Parantheses" style={{ height: '150px' }} />
-          <img
+          <ImageResult
             src={captureImage}
             alt="Classifier Result"
-            width="200px"
-            height="200px"
+            width="150px"
+            height="150px"
             style={{ marginLeft: '10px', marginRight: '10px' }}
           />
           <img src={RightParantheses} alt="Right Parantheses" style={{ height: '150px' }} />

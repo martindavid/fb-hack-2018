@@ -5,14 +5,12 @@ import { connect } from 'react-redux';
 import { Form, Field, withFormik } from 'formik';
 import Yup from 'yup';
 import Box from 'grommet/components/Box';
-import Image from 'grommet/components/Image';
 import FormFields from 'grommet/components/FormFields';
 import FormField from 'grommet/components/FormField';
 import Button from 'grommet/components/Button';
 import { routes } from '../../utils/routes';
 import { showAlert } from '../../actions/alert';
 import { storeAuthData } from '../../actions/auth';
-import logo from '../../assets/logo.png';
 import bg from '../../assets/Logo_front.gif';
 
 type Props = {
@@ -78,7 +76,7 @@ class Login extends Component {
               <Button
                 primary
                 label="Login"
-                type={this.props.isSubmitting ? 'button' : 'submit'}
+                type={isSubmitting ? 'button' : 'submit'}
               />
               <div
                 className="fb-login-button"

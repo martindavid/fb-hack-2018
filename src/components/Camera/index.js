@@ -1,10 +1,10 @@
 import React from 'react';
 import Spinner from 'components/Spinner';
-import styled from 'styled-components';
-import CameraButton from './cameraButton';
 import { connect } from 'react-redux';
 import { uploadImageSuccess } from 'actions/home';
 import { fetchImageInformation } from 'actions/data';
+import CameraButton from './cameraButton';
+
 
 class Camera extends React.Component {
   constructor() {

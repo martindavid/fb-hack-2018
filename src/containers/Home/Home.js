@@ -20,7 +20,7 @@ class Home extends Component {
         <div className="text-right">
           <p>
             <span style={{ fontSize: '18pt', color: 'tan', fontWeight: '500' }}>CO<sub>2</sub></span>
-            <img src={PawIcon} />
+            <img src={PawIcon} alt="Home Dashboard" />
             <span style={{ fontSize: '18pt', color: 'tan', fontWeight: '500' }}>75.5 Kg</span>
           </p>
         </div>
