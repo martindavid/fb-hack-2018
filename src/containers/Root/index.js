@@ -1,16 +1,14 @@
 // @flow
 import React, { Component } from 'react';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import App from 'grommet/components/App';
-import PageLoading from 'components/PageLoading';
 import Alert from 'components/Alert';
 import Login from 'components/Login';
 import Register from 'components/Register';
 import Home from 'containers/Home';
 import Onboarding from 'components/Onboarding';
-import Dictionary from 'components/Dictionary';
-import { routes } from '../../utils/routes';
 import { connect } from 'react-redux';
+import { routes } from '../../utils/routes';
 
 
 type Props = {
@@ -19,6 +17,8 @@ type Props = {
 };
 
 class Root extends Component {
+  componentWillMount() {}
+
   props: Props;
 
   render() {
@@ -26,11 +26,11 @@ class Root extends Component {
       <App centered={false}>
         <Alert key="alert" pathname={this.props.location.pathname} />
         <Switch key="content">
+          <Redirect exact from="/" to="/home" />
           <Route path={routes.login} component={Login} />
           <Route path={routes.register} component={Register} />
           <Route path={routes.onboarding} component={Onboarding} />
           <Route path={routes.home} component={Home} />
-          <Route path="/" />
         </Switch>
       </App>
     );

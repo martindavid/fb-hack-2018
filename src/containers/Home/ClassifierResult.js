@@ -13,6 +13,8 @@ const ResultText = styled.span`
 `;
 
 class ClassifierResult extends React.Component {
+  componentWillMount() {}
+
   render() {
     const { captureImage, data } = this.props;
 

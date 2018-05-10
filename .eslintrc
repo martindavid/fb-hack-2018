@@ -8,6 +8,13 @@
     "react/no-unused-prop-types": 0,
     "camelcase": 0
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
   "globals": {
     "fetch": true,
     "window": true,
