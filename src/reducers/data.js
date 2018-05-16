@@ -19,6 +19,7 @@ export default (state = initialState, action) => {
         data: action.data,
       };
     case FETCH_DATA_FAILED:
+      console.log(action);
       return {
         ...state,
         error: action.error,

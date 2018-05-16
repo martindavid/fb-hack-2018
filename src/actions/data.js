@@ -25,7 +25,7 @@ export const fetchImageInformation = image => (dispatch) => {
   dispatch(fetchDataInProgress(true));
   const data = new FormData(); // eslint-disable-line
   data.append('image', image);
-  return fetch('https://cat02saver-api.herokuapp.com/vision', {
+  return fetch('http://localhost:5000/vision', {
     method: 'POST',
     body: data,
   })
@@ -37,7 +37,7 @@ export const fetchImageInformation = image => (dispatch) => {
     })
     .catch((error) => {
       dispatch(fetchDataInProgress(false));
-      dispatch(fetchDataError(error));
+      dispatch(fetchDataError(error.message));
     });
 };
 
