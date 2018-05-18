@@ -1,0 +1,16 @@
+{
+  "name": "Waste Bit",
+  "description": "A small app that help you make informed waste disposal decision",
+  "keywords": [
+    "create-react-app",
+    "Sustainability App",
+    "War on Waste"
+  ],
+  "website": "https://waste-bit.mylabs.xyz/",
+  "repository": "https://github.com/martindavid/fb-hack-2018",
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack"
+    }
+  ]
+}
